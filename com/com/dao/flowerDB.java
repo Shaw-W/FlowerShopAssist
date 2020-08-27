@@ -9,7 +9,7 @@ public interface flowerDB {
 	public List<Flower> getAllFlower();
 	
 	//search flower information based on known
-	public List<Flower> selectFlower();
+	public List<Flower> selectFlower(String sqlOK, String[] strArr);
 	
 	//updata flower information
 	public int updateFlower(String sqlOK, Object[] strArr);

@@ -7,7 +7,7 @@ import java.util.Properties;
 //Basic DB Control
 
 public class connectDB {
-	public static String DRIVER; // DB Driver
+	public static String DRIVER = "com.mysql.jdbc.Driver"; // DB Driver
 	
 	Connection connection = null;
 	

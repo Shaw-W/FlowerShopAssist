@@ -3,42 +3,37 @@ package com.dao.func;
 import java.util.*;
 import java.sql.*;
 
-import com.dao.customerDB;
+import com.dao.flowerDB;
 import com.dao.connectDB;
-import com.entity.Customer;
+import com.entity.Flower;
 
-//customer info
-public class customerDBfunc extends connectDB implements customerDB{
+public class flowerDBfunc extends connectDB implements flowerDB {
 	
 	//DB connection
 	private Connection connect = null;
-		
+			
 	//run sql
 	private PreparedStatement preState = null;
-		
+			
 	//save result
 	private ResultSet rsSet = null;
 	
 	@Override
-	public int updateCustomer(String sqlOK, Object[] strArr) {
+	public List<Flower> getAllFlower() {
 		// TODO 自动生成的方法存根
-		int count = super.runSQL(sqlOK, strArr);
-		return count;
-	}
-
-	@Override
-	public List<Customer> getAllCustomers() {
-		// TODO 自动生成的方法存根
-		List<Customer> customerList = new ArrayList<Customer>();
+		List<Flower> flowerList = new ArrayList<Flower>();
 		try {
-			String preSQL = "select * from customer";
+			String preSQL = "select * from flower";
 			connect = getConnect();
 			preState = connect.prepareStatement(preSQL);
 			rsSet = preState.executeQuery();
 			while (rsSet.next()) {
-				Customer customer = new Customer();
-				customer.setType(rsSet.getString(1));
-				customerList.add(customer);
+				Flower flower = new Flower();
+				flower.setId(rsSet.getLong(1));
+				flower.setName(rsSet.getString(2));
+				flower.setPrice(rsSet.getInt(3));
+				flower.setStorage(rsSet.getInt(4));
+				flowerList.add(flower);
 		}
 			
 		} catch (SQLException e) {
@@ -50,13 +45,13 @@ public class customerDBfunc extends connectDB implements customerDB{
 		} finally {
 			super.closeAll(connect, preState, rsSet);
 		}
-		return customerList;
+		return flowerList;
 	}
 
 	@Override
-	public Customer selectCustomer(String sqlOK, String[] strArr) {
+	public List<Flower> selectFlower(String sqlOK, String[] strArr) {
 		// TODO 自动生成的方法存根
-		Customer custom = null;
+		List<Flower> flowerLi = new ArrayList<Flower>();
 		try {
 			connect = getConnect();
 			preState = connect.prepareStatement(sqlOK);
@@ -68,8 +63,12 @@ public class customerDBfunc extends connectDB implements customerDB{
 			
 			rsSet = preState.executeQuery();
 			while (rsSet.next()) {
-				custom = new Customer();
-				custom.setType(rsSet.getString(1));
+				Flower flower = new Flower();
+				flower.setId(rsSet.getLong(1));
+				flower.setName(rsSet.getString(2));
+				flower.setPrice(rsSet.getInt(3));
+				flower.setStorage(rsSet.getInt(4));
+				flowerLi.add(flower);
 			}
 			
 		} catch (Exception e) {
@@ -78,6 +77,14 @@ public class customerDBfunc extends connectDB implements customerDB{
 		} finally {
 			super.closeAll(connect, preState, rsSet);
 		}
-		return custom;
+		return flowerLi;
 	}
+
+	@Override
+	public int updateFlower(String sqlOK, Object[] strArr) {
+		// TODO 自动生成的方法存根
+		int count = super.runSQL(sqlOK, strArr);
+		return count;
+	}
+	
 }
