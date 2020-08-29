@@ -25,14 +25,14 @@ public class accountDBfunc extends connectDB implements accountDB{
 	
 	@Override
 	public int updateAccount(String sqlOK, Object[] strArr) {
-		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
 		int ac = super.runSQL(sqlOK, strArr);
 		return ac;
 	}
 
 	@Override
 	public List<Account> getFlowerShopAccount(String sqlOK, String[] strArr) {
-		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
 		List<Account> acList = new ArrayList<Account>();
 		try {
 			connect = getConnect();//link db

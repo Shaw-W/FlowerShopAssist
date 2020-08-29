@@ -3,18 +3,18 @@ package com.entity;
 import java.util.ArrayList;
 
 /**
- * è´­ç‰©è½¦å®ä½“ç±»
- * @author æœæ–‡å¼º
+ * ¹ºÎï³µÊµÌåÀà
+ * @author ¶ÅÎÄÇ¿
  *
  */
 public class ShoppingCart {
 	/**
-	 * é²œèŠ±ç§ç±»åˆ—è¡¨
+	 * ÏÊ»¨ÖÖÀàÁĞ±í
 	 */
 	private ArrayList<Long> flowerIds = new ArrayList<Long>();
 	
 	/**
-	 * é²œèŠ±æ•°é‡åˆ—è¡¨
+	 * ÏÊ»¨ÊıÁ¿ÁĞ±í
 	 */
 	private ArrayList<Integer> flowerNums = new ArrayList<Integer>();
 
@@ -38,10 +38,10 @@ public class ShoppingCart {
 	}
 	
 	/**
-	 * è´­ç‰©è½¦æ·»åŠ èŠ±
-	 * @param id è¦æ·»åŠ çš„èŠ±çš„id 
-	 * @param num è¦æ·»åŠ çš„èŠ±çš„æ•°é‡
-	 * @return æ˜¯å¦æˆåŠŸ
+	 * ¹ºÎï³µÌí¼Ó»¨
+	 * @param id ÒªÌí¼ÓµÄ»¨µÄid 
+	 * @param num ÒªÌí¼ÓµÄ»¨µÄÊıÁ¿
+	 * @return ÊÇ·ñ³É¹¦
 	 */
 	public boolean addFlower(long id, int num) {
 		for(int i=0;i<flowerIds.size();++i) {
@@ -57,9 +57,9 @@ public class ShoppingCart {
 	}
 	
 	/**
-	 * è´­ç‰©è½¦ç§»é™¤èŠ±
-	 * @param id è¦ç§»é™¤çš„èŠ±çš„id
-	 * @return æ˜¯å¦æˆåŠŸ
+	 * ¹ºÎï³µÒÆ³ı»¨
+	 * @param id ÒªÒÆ³ıµÄ»¨µÄid
+	 * @return ÊÇ·ñ³É¹¦
 	 */
 	public boolean removeFlower(long id) {
 		for(int i=0;i<flowerIds.size();++i) {

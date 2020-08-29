@@ -21,14 +21,14 @@ public class customerDBfunc extends connectDB implements customerDB{
 	
 	@Override
 	public int updateCustomer(String sqlOK, Object[] strArr) {
-		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
 		int count = super.runSQL(sqlOK, strArr);
 		return count;
 	}
 
 	@Override
 	public List<Customer> getAllCustomers() {
-		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
 		List<Customer> customerList = new ArrayList<Customer>();
 		try {
 			String preSQL = "select * from customer";
@@ -55,7 +55,7 @@ public class customerDBfunc extends connectDB implements customerDB{
 
 	@Override
 	public Customer selectCustomer(String sqlOK, String[] strArr) {
-		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
 		Customer custom = null;
 		try {
 			connect = getConnect();

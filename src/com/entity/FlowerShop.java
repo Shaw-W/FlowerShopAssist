@@ -3,18 +3,18 @@ package com.entity;
 import java.util.ArrayList;
 
 /**
- * é²œèŠ±å•†åº—å®ä½“ç±»
- * @author æœæ–‡å¼º
+ * ÏÊ»¨ÉÌµêÊµÌåÀà
+ * @author ¶ÅÎÄÇ¿
  *
  */
 public class FlowerShop {
 	/**
-	 * è´¦æˆ·
+	 * ÕË»§
 	 */
 	private Account account;
 	
 	/**
-	 * æ­£åœ¨å”®å–çš„é²œèŠ±åˆ—è¡¨
+	 * ÕıÔÚÊÛÂôµÄÏÊ»¨ÁĞ±í
 	 */
 	private ArrayList<Flower> sellingList;
 }

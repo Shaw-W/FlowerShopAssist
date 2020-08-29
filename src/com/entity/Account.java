@@ -1,23 +1,23 @@
 package com.entity;
 
 /**
- * è´¦æˆ·åŸºç±»
- * @author æœæ–‡å¼º
+ * ÕË»§»ùÀà
+ * @author ¶ÅÎÄÇ¿
  *
  */
 public class Account {
 	/**
-	 * è´¦æˆ·id
+	 * ÕË»§id
 	 */
 	private long id;
 	
 	/**
-	 * è´¦æˆ·å
+	 * ÕË»§Ãû
 	 */
 	private String name;
 	
 	/**
-	 * å¯†ç 
+	 * ÃÜÂë
 	 */
 	private String password;
 	

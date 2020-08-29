@@ -20,10 +20,10 @@ public class flowerDBfunc extends connectDB implements flowerDB {
 	
 	@Override
 	public List<Flower> getAllFlower() {
-		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
 		List<Flower> flowerList = new ArrayList<Flower>();
 		try {
-			String preSQL = "select * from flower";
+			String preSQL = "select * from flower where on_sale=true";
 			connect = getConnect();
 			preState = connect.prepareStatement(preSQL);
 			rsSet = preState.executeQuery();
@@ -50,7 +50,7 @@ public class flowerDBfunc extends connectDB implements flowerDB {
 
 	@Override
 	public List<Flower> selectFlower(String sqlOK, String[] strArr) {
-		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
 		List<Flower> flowerLi = new ArrayList<Flower>();
 		try {
 			connect = getConnect();
@@ -82,7 +82,7 @@ public class flowerDBfunc extends connectDB implements flowerDB {
 
 	@Override
 	public int updateFlower(String sqlOK, Object[] strArr) {
-		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
 		int count = super.runSQL(sqlOK, strArr);
 		return count;
 	}

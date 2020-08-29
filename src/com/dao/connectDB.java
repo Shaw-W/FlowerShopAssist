@@ -5,7 +5,6 @@ import java.sql.*;
 import java.util.Properties;
 
 //Basic DB Control
-
 public class connectDB {
 	public static String DRIVER = "com.mysql.jdbc.Driver"; // DB Driver
 	

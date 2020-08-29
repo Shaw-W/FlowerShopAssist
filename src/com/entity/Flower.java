@@ -1,27 +1,27 @@
 package com.entity;
 
 /**
- * é²œèŠ±å®ä½“ç±»
- * @author æœæ–‡å¼º
+ * ÏÊ»¨ÊµÌåÀà
+ * @author ¶ÅÎÄÇ¿
  */
 public class Flower {
 	/**
-	 * é²œèŠ±æ ‡è¯†ç¬¦
+	 * ÏÊ»¨±êÊ¶·û
 	 */
 	private long id;
 	
 	/**
-	 * é²œèŠ±åç§°
+	 * ÏÊ»¨Ãû³Æ
 	 */
 	private String name;
 	
 	/**
-	 * é²œèŠ±ä»·æ ¼ï¼ˆå•ä»·ï¼‰
+	 * ÏÊ»¨¼Û¸ñ£¨µ¥¼Û£©
 	 */
 	private double price;
 	
 	/**
-	 * ä»“åº“ä½™é‡
+	 * ²Ö¿âÓàÁ¿
 	 */
 	private int storage;
 	
